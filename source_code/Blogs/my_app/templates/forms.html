@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head-title%}
+Forms
+{% endblock head-title %}
+
+{% block content %}
+    <h1> Forms</h1>
+
+<form method="POST" action="." enctype="multipart/form-data">
+    {% csrf_token %}
+    {{my_form.as_p}}
+    <a href="/"> <button type="submit" name="submit"> Submit </button>
+    </a>
+</form>
+
+{% endblock content %}
+

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{%block content %}
+
+<form method="POST">
+
+    {% csrf_token %}
+    <ul>
+        <p>do u want to delete this data</p>
+        <li>{{delete_obj.title}}</li>
+        <li>{{delete_obj.slug}}</li>
+        <li>{{delete_obj.content}}</li>
+        <a href="{{home_page_url}}"> <button type="submit" name="submit"> Submit </button></a>
+    </ul>
+</form>
+
+{% endblock content %}

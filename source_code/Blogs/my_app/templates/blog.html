@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head-title %}
+  Blogs
+{% endblock head-title %}
+
+{% block content %}
+ {% for i in object %}
+    {% include "list-inline.html" with blog_post=i truncate=True %}
+    <!--<li><a href="{{i.get_absolute_url}}"> {{i.title}}</a></li>-->
+
+    <!--<li><a href="{{i.get_absolute_url}}"> {{i.slug}}</a></li>
+    <li><a href="{{i.get_absolute_url}}"> {{i.content}}</a></li>
+      -->
+{% endfor %}
+
+{% endblock content %}

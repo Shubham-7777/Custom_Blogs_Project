@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+    {% include "list-inline.html" with blog_post=obj truncate=False detail=True %}
+
+    <button><a href="{{obj.get_edit_url}}"> Edit </a></button>
+    <button><a href="{{obj.get_delete_url}}"> Delete </a></button>
+
+{% endblock content %}
+
+
+
+<!---<a href="{{i.get_edit_url}}"> <button type="submit" name="Edit"> Edit</button></a>
+<button type="submit" name="Delete"> Delete</button>-->
+
+<!--<a href="{{i.get_edit_url}}"><button type="submit" name="edit">Edit</button></a>
+                    <a href="{{i.get_delete_url}}"><button type="submit" name="Delete">Delete</button></a>-->
+                    <!--<a href="{{object.slug}}/delete/"> Delete </a>
+                    <a href="{{object.slug}}/edit/"> Edit </a>-->
+
+                    <!--<a href="edit/"> Edit </a>
+                    <a href="delete/"> Delete </a>-->
